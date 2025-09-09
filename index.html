@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Remix Icons for skills & projects -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    /* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background: #111;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  color: #00e5ff;
+}
+
+#navbar {
+  display: flex;
+  gap: 20px;
+}
+
+#navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#navbar a:hover {
+  color: #00e5ff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* About */
+#about {
+  padding: 50px 20px;
+}
+
+.typing-container {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #00e5ff;
+}
+
+.cursor {
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px 0;
+  border: 4px solid #00e5ff;
+}
+
+/* Skills */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.skill {
+  background: linear-gradient(135deg, #00e5ff, #7c4dff);
+  color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.project {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+}
+
+/* Contact */
+#contact {
+  padding: 40px 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea, button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+input, textarea {
+  background: #222;
+  color: #fff;
+}
+
+button {
+  background: linear-gradient(135deg, #00e5ff, #7c4dff);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: #111;
+  margin-top: 40px;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🌟 My Portfolio</h1>
+    <nav id="navbar">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <div class="typing-container">
+      <span id="typing-text"></span><span class="cursor">|</span>
+    </div>
+    <img src="adhi.jpg" alt="Profile Picture" class="profile-img">
+    <h2>Hi, I'm Angothu Adhisheshu 👋</h2>
+    <p>
+      A creative <b>Full Stack Developer</b> passionate about crafting engaging digital experiences.  <br>
+      I love turning ideas into <span class="highlight">interactive websites</span>, exploring new tech,  
+      and making the web more beautiful every day.
+    </p>
+  </section><br><br>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>🚀 My Skills</h2>
+    <div class="skills-list">
+      <div class="skill"><i class="ri-html5-fill"></i> HTML5</div>
+      <div class="skill"><i class="ri-css3-fill"></i> CSS3</div>
+      <div class="skill"><i class="ri-javascript-fill"></i> JavaScript</div>
+      <div class="skill"><i class="ri-reactjs-fill"></i> React</div>
+      <div class="skill"><i class="ri-nodejs-fill"></i> Node.js</div>
+      <div class="skill"><i class="ri-database-2-fill"></i> MongoDB</div>
+      <div class="skill"><i class="ri-github-fill"></i> Git & GitHub</div>
+      <div class="skill"><i class="ri-bootstrap-fill"></i> Bootstrap</div>
+      <div class="skill"><i class="ri-tailwind-css-fill"></i> Tailwind CSS</div>
+      <div class="skill"><i class="ri-code-box-fill"></i> Python</div>
+      <div class="skill"><i class="ri-server-fill"></i> Express.js</div>
+      <div class="skill"><i class="ri-android-fill"></i> Android</div>
+    </div>
+  </section><br><br>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>💻 Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <i class="ri-layout-4-fill"></i>
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal portfolio with smooth animations and modern UI.</p>
+      </div>
+      <div class="project">
+        <i class="ri-sun-fill"></i>
+        <h3>Weather App</h3>
+        <p>Real-time weather updates powered by OpenWeather API.</p>
+      </div>
+      <div class="project">
+        <i class="ri-shopping-cart-fill"></i>
+        <h3>E-commerce Store</h3>
+        <p>Full-stack shopping platform with cart, login, and payments.</p>
+      </div>
+    </div>
+  </section><br><br>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>📩 Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="user_name" placeholder="Your Name" required>
+      <input type="email" name="user_email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit"><i class="ri-send-plane-fill"></i> Send Message</button>
+    </form>
+    <p id="form-status"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>✨ &copy; 2025 Angothu Adhisheshu | Designed with ❤️</p>
+  </footer>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>// Mobile menu toggle
+function toggleMenu() {
+  document.getElementById("navbar").classList.toggle("show");
+}
+
+// Typing effect
+const text = "I am a Full Stack Developer";
+let index = 0;
+function typeEffect() {
+  if (index < text.length) {
+    document.getElementById("typing-text").textContent += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, 100);
+  }
+}
+window.onload = typeEffect;
+
+// EmailJS
+(function() {
+  emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS Public Key
+})();
+
+const form = document.getElementById("contact-form");
+const statusText = document.getElementById("form-status");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    .then(() => {
+      statusText.textContent = "✅ Message sent successfully!";
+      statusText.style.color = "limegreen";
+      form.reset();
+    }, (error) => {
+      statusText.textContent = "❌ Failed to send. Try again.";
+      statusText.style.color = "red";
+      console.error("Error:", error);
+    });
+});
+</script>
+</body>
+</html>
