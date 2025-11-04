@@ -1,296 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Remix Icons for skills & projects -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <style>
-    /* General */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #000;
-  color: #fff;
-  line-height: 1.6;
-  text-align: center;
-}
-
-/* Header */
-header {
-  background: #111;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-header h1 {
-  color: #00e5ff;
-}
-
-#navbar {
-  display: flex;
-  gap: 20px;
-}
-
-#navbar a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-#navbar a:hover {
-  color: #00e5ff;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* About */
-#about {
-  padding: 50px 20px;
-}
-
-.typing-container {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #00e5ff;
-}
-
-.cursor {
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 20px 0;
-  border: 4px solid #00e5ff;
-}
-
-/* Skills */
-.skills-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.skill {
-  background: linear-gradient(135deg, #00e5ff, #7c4dff);
-  color: #fff;
-  padding: 15px;
-  border-radius: 12px;
-  font-weight: bold;
-  transition: transform 0.3s;
-}
-
-.skill:hover {
-  transform: scale(1.05);
-}
-
-/* Projects */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.project {
-  background: #111;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
-}
-
-/* Contact */
-#contact {
-  padding: 40px 20px;
-}
-
-form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea, button {
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-}
-
-input, textarea {
-  background: #222;
-  color: #fff;
-}
-
-button {
-  background: linear-gradient(135deg, #00e5ff, #7c4dff);
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-/* Footer */
-footer {
-  padding: 20px;
-  background: #111;
-  margin-top: 40px;
-}
-
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Angothu Adhisheshu – Portfolio</title>
+  <meta name="description" content="Portfolio of Angothu Adhisheshu, Computer Science and Engineering student." />
+  <link rel="stylesheet" href="s.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>🌟 My Portfolio</h1>
-    <nav id="navbar">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certs">Certifications</a>
+        <a href="#activities">Activities</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- About -->
-  <section id="about">
-    <div class="typing-container">
-      <span id="typing-text"></span><span class="cursor">|</span>
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <!-- HOME -->
+    <section id="home" class="section home-section">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Explore my journey, skills, projects, and experiences as a Computer Science and Engineering student.</p>
+    </section>
+
+    <!-- ABOUT -->
+      <h1>Hi, I'm <span class="accent"><span id="typewriter" aria-live="polite"></span><span class="caret" aria-hidden="true"></span></span> 👋</h1>
+
+   
+      <aside class="hero-right card profile-card">
+        <!-- Profile photo -->
+        <img src="adhi.jpg" alt="Angothu Adhisheshu" class="avatar-img">
+        <div class="profile-info">
+          <h3 class="name">Angothu Adhisheshu</h3>
+          <p class="role">B.Tech (CSE) — Vardhaman College of Engineering</p>
+          <p class="small muted">BTech CGPA: 8.5 | Diploma CGPA: 9.13</p>
+
+          <div class="socials">
+            <a target="_blank" rel="noopener" href="https://github.com/Adhisheshu1210">GitHub</a>
+            <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/angothu-adhisheshu-b8632733b">LinkedIn</a>
+          </div>
+
+          <div class="profile-actions">
+            <a class="btn small" href="adhisheshu_resume.pdf" download>Download Resume</a>
+            <a class="btn small ghost" href="#contact">Message</a>
+          </div>
+        </div>
+      </aside>
+  <section id="about" class="section hero">
+  <h2>About</h2>
+  <div class="hero-left">
+    <div class="abstract card">
+      <p>
+  I am a <strong>curious and self-driven Computer Science student</strong> with a strong foundation in 
+  <em>problem-solving, teamwork, and leadership</em>. I enjoy tackling real-world challenges through 
+  full-stack development and practical applications of machine learning. Beyond coding, I value 
+  adaptability and continuous learning as essential to professional growth. I am skilled in 
+  Java, Python, C, C++, HTML, CSS, and JavaScript. I am seeking an internship in software development 
+  where I can apply my technical expertise and passion for coding to solve real-world problems, while 
+  gaining hands-on experience in building scalable software systems and learning from industry experts.
+</p>
+
     </div>
-    <img src="adhi.jpg" alt="Profile Picture" class="profile-img">
-    <h2>Hi, I'm Angothu Adhisheshu 👋</h2>
-    <p>
-      A creative <b>Full Stack Developer</b> passionate about crafting engaging digital experiences.  <br>
-      I love turning ideas into <span class="highlight">interactive websites</span>, exploring new tech,  
-      and making the web more beautiful every day.
-    </p>
-  </section><br><br>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>🚀 My Skills</h2>
-    <div class="skills-list">
-      <div class="skill"><i class="ri-html5-fill"></i> HTML5</div>
-      <div class="skill"><i class="ri-css3-fill"></i> CSS3</div>
-      <div class="skill"><i class="ri-javascript-fill"></i> JavaScript</div>
-      <div class="skill"><i class="ri-reactjs-fill"></i> React</div>
-      <div class="skill"><i class="ri-nodejs-fill"></i> Node.js</div>
-      <div class="skill"><i class="ri-database-2-fill"></i> MongoDB</div>
-      <div class="skill"><i class="ri-github-fill"></i> Git & GitHub</div>
-      <div class="skill"><i class="ri-bootstrap-fill"></i> Bootstrap</div>
-      <div class="skill"><i class="ri-tailwind-css-fill"></i> Tailwind CSS</div>
-      <div class="skill"><i class="ri-code-box-fill"></i> Python</div>
-      <div class="skill"><i class="ri-server-fill"></i> Express.js</div>
-      <div class="skill"><i class="ri-android-fill"></i> Android</div>
+    <p class="lead">
+  Passionate about building full-stack apps and practical machine-learning projects.  
+  I also have a foundational understanding of <strong>ethical hacking</strong>, including basics of network security,  
+  vulnerability assessment, and secure coding practices, which helps me build safer applications.  
+</p>
+
+
+    <ul class="meta">
+      <li>📍 Hyderabad, India</li>
+      <li>📞 <a href="tel:+917702603872">+91-7702603872</a></li>
+      <li>✉️ <a href="mailto:adhisheshuangothu@gmail.com">adhisheshuangothu@gmail.com</a></li>
+    </ul>
+
+    <div class="hero-cta">
+      <a class="btn" href="#projects">See Projects</a>
+      <a class="btn ghost" href="#contact">Contact Me</a>
     </div>
-  </section><br><br>
+  </div>
+</section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>💻 Projects</h2>
-    <div class="projects-grid">
-      <div class="project">
-        <i class="ri-layout-4-fill"></i>
-        <h3>Portfolio Website</h3>
-        <p>A responsive personal portfolio with smooth animations and modern UI.</p>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="grid auto-3">
+        <div class="card"><strong>B.Tech (CSE)</strong><p>Vardhaman College of Engineering<br> (2024–2027)<br>CGPA: 8.5</p></div>
+        <div class="card"><strong>Diploma (CSE)</strong><p>KDR Govt Polytechnic, Wanaparthy<br> (2021–2024)<br>CGPA: 9.13</p></div>
+        <div class="card"><strong>SSC</strong><p>VSR High School, Haliya<br> (2021)<br>CGPA: 10.0</p></div>
       </div>
-      <div class="project">
-        <i class="ri-sun-fill"></i>
-        <h3>Weather App</h3>
-        <p>Real-time weather updates powered by OpenWeather API.</p>
-      </div>
-      <div class="project">
-        <i class="ri-shopping-cart-fill"></i>
-        <h3>E-commerce Store</h3>
-        <p>Full-stack shopping platform with cart, login, and payments.</p>
+    </section>
+
+    <!-- PROJECTS -->
+   <section id="projects" class="section">
+  <h2>Academic Projects</h2>
+  <div class="grid two-col">
+    
+    <div class="card">
+      <h3>Expense Tracker (Django)</h3>
+      <p>Web-based expense tracker with aggregation. Project includes tracking of daily expences using django module<br>
+– Led the project as team lead and developed a web-based expense tracker using Django.<br>– The app helps users record
+and view expenses on a weekly, monthly, and yearly basis.<br>
+– Tech stack: Python, HTML, CSS, JavaScript, Django, SQL.
+</p>
+      <div class="card-actions">
+        <button class="btn play-demo" data-demo="https://drive.google.com/file/d/15y7r8h9yXyhivFDG9z80N6GF9VnITx7Y/preview">▶ Play Demo</button>
+        <a href="ExpenseTra.pdf" class="btn">📄 View Details</a>
+        
       </div>
     </div>
-  </section><br><br>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>📩 Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" name="user_name" placeholder="Your Name" required>
-      <input type="email" name="user_email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit"><i class="ri-send-plane-fill"></i> Send Message</button>
-    </form>
-    <p id="form-status"></p>
-  </section>
+    <div class="card">
+      <h3>AutoAttend (Flask)</h3>
+      <p>Face recognition and attendance system. Project includes detect the face and capture the current image.<br>
+– Developed a face recognition system that detects and stores current images using Flask, Python, and OpenCV.<br>
+– Tech used: HTML, CSS, JavaScript, SQLite.
+</p>
+      <div class="card-actions">
+        <button class="btn play-demo" data-demo="https://your-demo-link.com">▶ Play Demo</button>
+        <a href="EDTf.pdf" class="btn">📄 View Details</a>
+        
+      </div>
+    </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>✨ &copy; 2025 Angothu Adhisheshu | Designed with ❤️</p>
+    <div class="card">
+      <h3>Tale App (Flask)</h3>
+      <p>Story sharing and meme app with speech recognition. Project includes story sharing, meme uploads, music mixing, and childrens content using Flask.<br>
+– Developed user login, story sharing with likes/comments/shares, meme upload/download, and music mixing with voice recognition.<br>
+– Used Flask, SQLite, SQLAlchemy, Flask-Login, pydub, and speech recognition for full-stack implementation.
+</p>
+      <div class="card-actions">
+        <button class="btn play-demo" data-demo="https://drive.google.com/file/d/111CzEwh1a3pKTUsnQLLbgHOsPRwH5plK/preview">▶ Play Demo</button>
+        <a href="Team-1 report.pdf" class="btn">📄 View Details</a>
+        
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="demoModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe id="demoFrame" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+
+    <!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <h2>Experience</h2>
+  <div class="grid auto-4">
+  <div class="card">
+    <img src="nsic.jpg" alt="NSIC Hyderabad" class="card-img">
+    <div class="card-body">
+      <h3>Industrial Training — NSIC, Hyderabad</h3>
+      <p>Dec 2023 – Apr 2024<br>Basics in AWS, Big Data, Data Science, and Python.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="harks.jpg" alt="harks Hyderabad" class="card-img">
+    <div class="card-body">
+      <h3>Content Creation</h3>
+      <p>May - Jun (2025)<br>Expect guidance on presenting work experience, demonstrating SEO knowledge, and highlighting social media expertise, all while keeping language barriers in mind.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certs" class="section">
+  <h2>Certifications</h2>
+  <div class="grid auto-4">
+    <div class="card">
+      <img src="java.jpg" alt="NPTEL" class="card-img">
+      <p>NPTEL – Programming in Java (2025)</p>
+    </div>
+    <div class="card">
+      <img src="fw.jpg" alt="Infosys Springboard" class="card-img">
+      <p>Infosys Springboard – Front End Web Developer (2025)</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ACTIVITIES -->
+    <!-- ACTIVITIES -->
+<section id="activities" class="section">
+  <h2>Activities</h2>
+
+  <!-- Main intro paragraph -->
+  
+  </h2> <div class="card">
+  <p>
+    Throughout my academic journey, I have actively participated in various technical and non-technical activities.  
+    These experiences helped me build leadership, teamwork, and communication skills.  
+    Engaging in competitions and events also enhanced my problem-solving and creativity.  
+  </p>
+  <p><li>Mentored a team of 5 peers ensuring successful collaboration and goal achievement.</li>
+     <li>Developed an innovative project idea under time constraints.</li>
+     <li>Presented the solution to a panel of judges, receiving positive feedback.</li>
+  </p>
+
+  <!-- Activity Card -->
+   
+  
+    <h1>Certificate of Participations:</h1>
+  <div class="grid auto-4">
+    <div class="card">
+      <img src="adobe.jpg" alt="Hackathon Participation" class="card-img">
+      <h3>Adobe</h3>
+      
+    </div>
+    <div class="card-body">
+      <img src="aincat.jpg" alt="Hackathon Participation" class="card-img">
+      <h3>AINCAT 2025 - India's Biggest Career Aptitude Test</h3>
+      
+    </div>
+  </div>
+  </div>
+
+</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p class="sub">Have a query or want to collaborate? Send me a quick message — it will open your mail client.</p>
+
+      <div class="contact-wrap">
+        <form id="contactForm" class="contact-form" onsubmit="return handleContactSubmit(event)">
+          <label>Your name<input id="cf-name" type="text" required></label>
+          <label>Your email<input id="cf-email" type="email" required></label>
+          <label>Subject<input id="cf-subject" type="text" required></label>
+          <label>Message<textarea id="cf-message" rows="6" required></textarea></label>
+          <div class="form-actions">
+            <button type="submit" class="btn">Send Message</button>
+            <button type="reset" class="btn ghost">Reset</button>
+          </div>
+        </form>
+
+        <aside class="card quick-info">
+          <h4>Contact Info</h4>
+          <p><strong>Email:</strong> <a href="mailto:adhisheshuangothu@gmail.com">adhisheshuangothu@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+917702603872">+91-7702603872</a></p>
+          <p><strong>Location:</strong> Hyderabad, India</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Angothu Adhisheshu. All rights reserved.</div>
   </footer>
 
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>// Mobile menu toggle
-function toggleMenu() {
-  document.getElementById("navbar").classList.toggle("show");
-}
-
-// Typing effect
-const text = "I am a Full Stack Developer";
-let index = 0;
-function typeEffect() {
-  if (index < text.length) {
-    document.getElementById("typing-text").textContent += text.charAt(index);
-    index++;
-    setTimeout(typeEffect, 100);
-  }
-}
-window.onload = typeEffect;
-
-// EmailJS
-(function() {
-  emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS Public Key
-})();
-
-const form = document.getElementById("contact-form");
-const statusText = document.getElementById("form-status");
-
-form.addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-    .then(() => {
-      statusText.textContent = "✅ Message sent successfully!";
-      statusText.style.color = "limegreen";
-      form.reset();
-    }, (error) => {
-      statusText.textContent = "❌ Failed to send. Try again.";
-      statusText.style.color = "red";
-      console.error("Error:", error);
-    });
-});
-</script>
+  <script src="s.js"></script>
 </body>
 </html>
